@@ -1,3 +1,5 @@
+import pytest
+
 
 def twoSum(nums, target):
     m = {}
@@ -30,6 +32,28 @@ def threeSumItertools(nums, target):
     for i, j, k in combinations(nums, 3):
         if i + j + k == target:
             return i * j * k
+
+
+@pytest.mark.parametrize(
+    ('input', 'result'),
+    (
+            ['1721,979,366,299,675,1456', 514579],
+    ),
+)
+def test_twoSum(input, result):
+    input = [int(i) for i in input.split(",")]
+    assert twoSum(input, 2020) == result
+
+
+@pytest.mark.parametrize(
+    ('input', 'result'), (
+            ['1721,979,366,299,675,1456', 241861950],
+    ),
+)
+def test_threeSum(input, result):
+    input = [int(i) for i in input.split(",")]
+    assert threeSum(input, 2020) == result
+    assert threeSumItertools(input, 2020) == result
 
 
 def main():
