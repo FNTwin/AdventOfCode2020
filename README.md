@@ -2,6 +2,6 @@
 
 https://adventofcode.com/
 
-##About
+## About
 
 Python implementation of Advent Of Code 2020 because I'm getting bored and I need something to do
