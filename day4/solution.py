@@ -119,7 +119,7 @@ def test_part2(input, result):
             "num": 6,
             "valid": "abcdef0123456789",
         },
-        'ecl': ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"],
+        'ecl': ["amb", "blu", "brn", "gry", "grn", "hzl", "oth" ],
         'pid': 9
     }
     assert parse_input_and_count_2(input, required2) == result

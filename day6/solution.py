@@ -11,7 +11,7 @@ def count_answers(input):
     n = 0
     lines = input.split("\n\n")
     for line in lines:
-        unique = set(line) - set("\n")
+        unique = (set(line) - set("\n"))
         n += len(unique)
     return n
 
@@ -22,7 +22,7 @@ def count_answers_2(input):
     for group in lines:
         group = group.splitlines()
         unique = set(group[0])
-        for answer in group[1:]:
+        for answer in group:
             unique = unique.intersection(answer)  # intersection can also be use with unique &= answer
         n += len(unique)
     return n
