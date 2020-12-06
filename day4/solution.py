@@ -68,7 +68,7 @@ iyr:2011 ecl:brn hgt:59in"""
     )
 )
 def test_part1(input, result):
-    required = set(('byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'))
+    required = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
     assert parse_input_and_count(input, required) == result
 
 
@@ -119,14 +119,14 @@ def test_part2(input, result):
             "num": 6,
             "valid": "abcdef0123456789",
         },
-        'ecl': ["amb", "blu", "brn", "gry", "grn", "hzl", "oth" ],
+        'ecl': ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"],
         'pid': 9
     }
     assert parse_input_and_count_2(input, required2) == result
 
 
 def main():
-    required = set(('byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'))
+    required = {'byr', 'iyr', 'eyr', 'hgt', 'hcl', 'ecl', 'pid'}
     required2 = {
         'byr': [1920, 2002],
         'iyr': [2010, 2020],

@@ -28,7 +28,7 @@ def minimal_ride(input, mode_number, modes=None):
         x %= len(lines[0])
         if lines[y][x] == "#":
             tree += 1
-    return (tree)
+    return tree
 
 
 pattern = """..##.......
